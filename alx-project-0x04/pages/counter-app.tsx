@@ -1,19 +1,45 @@
 import { useState } from 'react'
-import Button from "../components/common/Button";
 
-export default function CounterApp() {
-  const [count, setCount] = useState(0)
+const CounterApp: React.FC = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count > 0 ? - 1 : 0);
+  };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-center text-center p-6">
-      <h1 className="text-3xl font-bold mb-4">Counter App</h1>
-      <p className="text-gray-600 mb-6">A simple client-side counter to demonstrate interactivity.</p>
+    <div className="min-h-screen bg-gradient-to-r from-yellow-400 to-pink-500 flex flex-col justify-center items-center text-white">
+      {/* Tittle */}
+      <h1 className="text-6xl font-extrabold mb-6"> Fun Counter App</h1>
 
-      <div className="flex items-center gap-4">
-        <Button action={() => setCount(c => c - 1)} buttonLabel="-" buttonBackgroundColor="orange" buttonSize="" />
-        <div className="text-2xl font-mono px-6">{count}</div>
-        <Button action={() => setCount(c => c + 1)} buttonLabel="+" buttonBackgroundColor="green" buttonSize="" />
+      {/* Funny message */}
+      <p className="text-lg font-medium mb-4">
+        Current Count: {count} {count ===0 ? "🙈 No clicks yet!" : count % 10 === 0 && count !== 0 ? "🔥 You're on fire!" : ""}
+      </p>
+
+      {/* Counter Display */}
+      <div className="text-6xl font-bold mb-8">
+        {count}
       </div>
+
+      {/* Buttons */}
+      <div className="flex space-x-4">
+        <button onClick={increment} className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105">
+          Increment 🚀
+        </button>
+        <button onClick={decrement} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105">
+          Decrement 👎🏿
+        </button>
+      </div>
+
+      {/* Footer Message */}
+      <p className="mt-8 text-sm text-white opacity-75"> Keep clicking, who knows what happens at 100? 🤯</p>
     </div>
   )
 }
+
+export default CounterApp;
