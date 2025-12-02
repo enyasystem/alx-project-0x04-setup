@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Button from "../common/Button";
 import { usePathname } from "next/navigation";
-import { useCount } from "context/CountContext";
-import { createContext, useContext, useState, ReactNode } from "react"
+import { useCount } from "@/context/CountContext";
 
 
 
