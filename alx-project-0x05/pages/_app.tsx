@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
 import Layout from '@/components/layouts/Layout'
-import '@/styles/global.css'
+import '@/styles/globals.css'
 import { CountProvider } from '@/context/CountContext'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
