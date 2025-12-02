@@ -1,0 +1,82 @@
+# Gitignore file for Node.js projects
+
+node_modules/
+dist/
+.env
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vscode/
+.idea/
+*.log           
+
+# Ignore build directories
+build/  
+coverage/
+*.tsbuildinfo
+# Ignore OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini 
+
+# Ignore IDE specific files
+*.suo   
+*.ntvs*
+*.njsproj
+
+*.sln
+*.sw?   
+
+# Ignore Tailwind CSS generated files
+tailwind.config.cjs
+postcss.config.cjs
+
+
+# Ignore TypeScript compiled files
+.gz 
+.tsc/
+*.js.map
+# Ignore package-lock.json and yarn.lock if you want to avoid committing them
+package-lock.json
+yarn.lock
+
+# Ignore other files
+.vscode/history/
+*.bak
+*.tmp
+*.old
+*.orig
+*.rej
+*.swp
+*~
+# Ignore coverage reports
+coverage/
+
+
+.nyc_output/        
+
+# Ignore log files
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+# Ignore temporary files
+tmp/
+temp/
+# Ignore system files   
+*.DS_Store
+*.AppleDouble
+.LSOverride
+# Thumbnails
+._*
+.Spotlight-V100 
+.Trashes
+# Ignore desktop services store files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+.next/
